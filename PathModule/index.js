@@ -1,5 +1,6 @@
 const path=require('path');
 
+//returns the path of the file
 console.log(path.dirname('C:/Users/DELL/OneDrive/DesktopNode-practice/PathModule/index.js'));
 
 console.log(path.extname('C:/Users/DELL/OneDrive/DesktopNode-practice/PathModule/index.js'));
