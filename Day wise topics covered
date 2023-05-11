@@ -1,6 +1,6 @@
 Topics covered:
 
-Date: 19 May 2023
+Date: 9 May 2023
 1. What is node.js?
 2. When to use nodejs?
 3. Prerequisite for node js
@@ -9,3 +9,10 @@ Date: 19 May 2023
 6. Buffer Type
 7. Asynchronous function
 8. Synchronous and Asynchronous code
+
+Date: 10 May 2023
+1. OS Module
+2. Path Module
+3. Create and export Module
+4. NPM Modules
+5. Nodemon in node.js
