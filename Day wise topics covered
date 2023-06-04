@@ -25,4 +25,23 @@ Date: 11 May 2023
 5. Creating a simple API in node.js
 6.Events module in node.js
 7. Streams and buffer in node.js
-8.Stream pipes in node.js
+8. Stream pipes in node.js
+
+Date: 12 May 2023
+1. ExpressJs
+2. Routing in Express
+3. Send HTML ans JS as response
+4. static middleware
+5. Template engines
+6. views
+7. Partials
+8. Error Page
+
+Date: 13 May 2023
+1. MongoDb intro
+2. Create databases,collections and documents
+3. Mongo Db CRUD operation
+4. MongoDb Compass
+5. Mongoose intro
+
+
