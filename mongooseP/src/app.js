@@ -33,15 +33,40 @@ const Playlist = new mongoose.model("Playlist",playlistSchema);
 //inserting data or creating a document
 const createDoc = async ()=>{
 
-  try{const reactPlayList= new Playlist({
-    name: "Node JS",
-    cType: "Back End",
-    videos: 150,
-    author: "xyz",
-    active: true,
+  try{
+    const JSPlaylist= new Playlist({
+      name: "Javascript",
+      cType: "Front End",
+      videos: 100,
+      author: "xyz",
+      active: true
   })
 
-  const res = await reactPlayList.save();
+  const mongoPlaylist= new Playlist({
+    name: "Mongo",
+    cType: "Database",
+    videos: 50,
+    author: "xyz",
+    active: true
+  })
+
+  const mongoosePlaylist= new Playlist({
+    name: "Mongoose",
+    cType: "Database",
+    videos: 4,
+    author: "xyz",
+    active: true
+  })
+
+  const expressPlaylist= new Playlist({
+    name: "Express JS",
+    cType: "Back End",
+    videos: 40,
+    author: "xyz",
+    active: true
+  })
+
+  const res = await Playlist.insertMany([JSPlaylist,mongoPlaylist,mongoosePlaylist,expressPlaylist]);
   console.log(res);
 }
   catch(error){
@@ -49,5 +74,12 @@ const createDoc = async ()=>{
   }
 }
 
-createDoc();
+//createDoc();
+
+const getDoc = async ()=>{
+   const result = await Playlist.find({cType:"Front End"}).select({name:1, _id:0});
+   console.log(result);
+}
+
+getDoc();
 
