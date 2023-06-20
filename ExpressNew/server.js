@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const mainRouter = require('./routes/index');
+const productRouter = require('./routes/products');
 // const apiKeyMiddleWare = require('./middleware/apiKey');
 
 const PORT = process.env.PORT || 5000;
@@ -34,7 +35,9 @@ app.set('view engine','ejs');
 //   });
 // });
 //app.use(apiKeyMiddleWare);
+app.use(productRouter);
 app.use(mainRouter);
+
 
 
 app.listen(PORT, ()=> console.log(`Listening on port ${PORT}`))
