@@ -1,4 +1,5 @@
 const router = require('express').Router();
+// const apiKeyMiddleWare = require('../middleware/apiKey');
 
 router.get('/',(req,res)=>{
   res.render('index', {
@@ -15,6 +16,21 @@ router.get('/about',(req,res)=>{
 
 router.get('/download',(req,res)=>{
   res.download(path.resolve(__dirname)+'/about.html');
-})
+});
+
+router.get('/api/products', (req,res)=>{
+  res.json(
+    [
+      {
+        id:'1',
+        name:'Chrome'
+      },
+      {
+        id:'2',
+        name:'Firefox'
+      }
+    ]
+  )
+});
 
 module.exports = router;
