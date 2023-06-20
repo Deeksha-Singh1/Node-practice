@@ -21,11 +21,15 @@ app.get('/download',(req,res)=>{
 
 //with ejs template engine
 app.get('/',(req,res)=>{
-  res.render('index');
+  res.render('index', {
+    title:'My Home page'
+  });
 });
 
 app.get('/about',(eq, res)=>{
-  res.render('about')
+  res.render('about',{
+    title:'My About page'
+  });
 });
 
 app.listen(PORT, ()=> console.log(`Listening on port ${PORT}`))

@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Express js</title>
+ <%- include('../components/head.ejs'); %>
+  <title>
+    <%= title %>
+  </title>
 </head>
 <body>
-  <a href="/">Home</a>
-  <a href="/about">About</a>
+  <%- include('../components/nav.ejs'); %>
   <h1>Welcome to homepage</h1>
   <a href="/download">Download</a>
 </body>
