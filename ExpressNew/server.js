@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const mainRouter = require('./routes/index');
-const apiKeyMiddleWare = require('./middleware/apiKey');
+// const apiKeyMiddleWare = require('./middleware/apiKey');
 
 const PORT = process.env.PORT || 5000;
 
@@ -33,7 +33,7 @@ app.set('view engine','ejs');
 //     title:'My About page'
 //   });
 // });
-app.use(apiKeyMiddleWare);
+//app.use(apiKeyMiddleWare);
 app.use(mainRouter);
 
 
